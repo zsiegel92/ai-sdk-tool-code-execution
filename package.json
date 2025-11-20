@@ -1,0 +1,44 @@
+{
+  "name": "ai-sdk-tool-code-execution",
+  "version": "0.0.1",
+  "description": "Code execution tool for AI SDK that uses Vercel Sandbox.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "NODE_ENV=development tsx --env-file=.env src/test.ts",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "ai",
+    "ai-sdk",
+    "tools"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "dotenv": "^17.2.3",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "ai": "^5.0.92",
+    "ai-sdk-tool-code-execution": "^0.0.1",
+    "sandbox": "^1.0.3",
+    "zod": "^4.1.12"
+  }
+}
