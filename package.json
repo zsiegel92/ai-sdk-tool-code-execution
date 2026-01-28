@@ -1,5 +1,5 @@
 {
-  "name": "@zsiegel/ai-sdk-tool-code-execution",
+  "name": "@zsiegel1/ai-sdk-tool-code-execution",
   "version": "0.0.2",
   "description": "Code execution tool for AI SDK that uses Vercel Sandbox.",
   "type": "module",
