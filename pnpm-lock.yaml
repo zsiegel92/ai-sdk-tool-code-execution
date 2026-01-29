@@ -8,16 +8,22 @@ importers:
 
   .:
     dependencies:
+      ai:
+        specifier: ^5.0.92
+        version: 5.0.92(zod@4.1.12)
+      ai-sdk-tool-code-execution:
+        specifier: ^0.0.1
+        version: 0.0.1
       sandbox:
         specifier: ^1.0.3
         version: 1.0.3
+      zod:
+        specifier: ^4.1.12
+        version: 4.1.12
     devDependencies:
       '@types/node':
         specifier: ^24.10.1
         version: 24.10.1
-      ai:
-        specifier: ^5.0.92
-        version: 5.0.92(zod@4.1.12)
       dotenv:
         specifier: ^17.2.3
         version: 17.2.3
@@ -30,9 +36,6 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
-      zod:
-        specifier: ^4.1.12
-        version: 4.1.12
 
 packages:
 
@@ -427,6 +430,9 @@ packages:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  ai-sdk-tool-code-execution@0.0.1:
+    resolution: {integrity: sha512-YtJ9hnzSZ+KSb7AS/owOQhG1UPhScSo+j9MrSYtzSvaMs7i1f7aEWqe30zHKgDw8kRSDL5O5LEzhUjjDq9aiBQ==}
 
   ai@5.0.92:
     resolution: {integrity: sha512-EnPe3QXiD06Tg7iAt/oU3JSwedI1nuhEBnTjyfn1qTXaqmJ6qI4YG8wn/eBHRVXnmljDFDNYvGBC5pALYV1rAA==}
@@ -1126,6 +1132,16 @@ snapshots:
       - react-native-b4a
 
   acorn@8.15.0: {}
+
+  ai-sdk-tool-code-execution@0.0.1:
+    dependencies:
+      ai: 5.0.92(zod@4.1.12)
+      sandbox: 1.0.3
+      zod: 4.1.12
+    transitivePeerDependencies:
+      - bare-abort-controller
+      - react-native-b4a
+      - supports-color
 
   ai@5.0.92(zod@4.1.12):
     dependencies:
